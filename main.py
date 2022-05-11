@@ -1,7 +1,7 @@
 from pytube import YouTube
 import os
 
-url = YoutTube(str(input("Youtube Video URL: ")))
+url = YouTube(str(input("Youtube Video URL: ")))
 vid = url.streams.filter(only_audio=True).first()
 out_file = vid.download(output_path=".")
 base, ext = os.path.splitext(out_file)
